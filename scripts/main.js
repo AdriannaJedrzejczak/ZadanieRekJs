@@ -6,8 +6,8 @@ import {refreshTableContent} from './tableModule.js';
 
 var amountOfDataToGenerate = 200;
 
-if(!getRequestedNumber()) {
-    window.location.href='/?page=1';
+if( !getRequestedNumber() ) {
+    window.location.href = '/?page=1';
 }
 
 var data;
@@ -16,7 +16,7 @@ var actualPage = getRequestedNumber();
 var maxPage = readFromLocalStorage("maxPage");
 var sortBy = "nameHeader";
 var dir = true;
-var nameHeader= document.getElementById("nameHeader");
+var nameHeader = document.getElementById("nameHeader");
 nameHeader.addEventListener("click", changeSort);
 var surnameHeader = document.getElementById("surnameHeader");
 surnameHeader.addEventListener("click", changeSort);
@@ -33,15 +33,13 @@ btnNext.addEventListener("click", onButtonClicked);
 startFunction();
 
 function startFunction() {
-    if(!readFromLocalStorage(getRequestedNumber())) {
+    if( !readFromLocalStorage(getRequestedNumber()) ) {
         data = generateData(amountOfDataToGenerate);
         saveToLocalStorage(actualPage, data);
-        console.log(data);
-
     } else {
         data = readFromLocalStorage(getRequestedNumber());
     }
-    if(readFromLocalStorage("maxPage")==null) {
+    if( !readFromLocalStorage("maxPage") ) {
         maxPage = actualPage;
     }
     actualData = data;
