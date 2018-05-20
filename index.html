@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="filterContainer">
+        <label for="filterInput">Filter data: </label>
+        <input class="filterInput" type="text" placeholder="Enter data to filter" id="filterInput"/>
+    </div>
+
+
+    <div class="tableContainer">
+        <table id="PersonTable" class="table">
+            <thead>
+                <tr>
+                    <th id="nameHeader">Name</th>
+                    <th id="surnameHeader">Surname</th>
+                    <th id="birthDateHeader">Birth Date</th>
+                    <th id="peselHeader">Pesel</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <button class="newDataBtn" id="btnNext">Generate new set of data</button>
+    <div class="paginationContainer" id="pagination"></div>
+</div>
+
+
+
+
+
+<script src="scripts/main.js" type="module"></script>
+<script src="scripts/sortModule.js" type="module"></script>
+</body>
+</html>

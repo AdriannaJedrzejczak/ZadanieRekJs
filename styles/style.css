@@ -1,0 +1,79 @@
+.container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.filterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.filterInput {
+    width: 90%;
+}
+
+.tableContainer {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.table {
+    width: 100%;
+}
+
+.table, .table th, .table td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table th,  .table td {
+    padding: 15px;
+}
+
+.table th {
+    background: lightblue;
+}
+
+.table tr:nth-child(2n+1) {
+    background-color: #ddd;
+}
+
+.newDataBtn {
+    margin: 20px auto;
+    display: block;
+    background-color: #ddd;
+    border: 2px cornflowerblue solid;
+    padding: 10px;
+}
+
+.newDataBtn:hover {
+    background-color: lightblue;
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.arrow {
+    font-size: 50px;
+    font-weight: normal;
+    color: grey;
+    text-decoration: none;
+}
+
+.available:hover {
+    font-weight: bold;
+}
+
+.available {
+    color: black;
+}
